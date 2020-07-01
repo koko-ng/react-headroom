@@ -89,15 +89,17 @@ export default class Headroom extends Component {
       this.setHeightOffset()
     }
 
+    const parentChanged = prevProps.parent !== this.props.parent
     // Add/remove event listeners when re-enabled/disabled
-    if (!prevProps.disable && this.props.disable) {
+    if (parentChanged || (!prevProps.disable && this.props.disable)) {
       this.props.parent().removeEventListener('scroll', this.handleScroll)
       this.props.parent().removeEventListener('resize', this.handleResize)
 
       if (prevState.state !== 'unfixed' && this.state.state === 'unfixed') {
         this.props.onUnfix()
       }
-    } else if (prevProps.disable && !this.props.disable) {
+    }
+    if (parentChanged || (prevProps.disable && !this.props.disable)) {
       this.props.parent().addEventListener('scroll', this.handleScroll)
 
       if (this.props.calcHeightOnResize) {
