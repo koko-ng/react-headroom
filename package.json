@@ -1,10 +1,10 @@
 {
-  "name": "react-headroom",
+  "name": "react-headroom-koko-ng",
   "description": "Hide your header until you need it. React.js port of headroom.js",
   "version": "3.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>, koko-ng <koko.fr.mu@gmail.com>",
   "bugs": {
-    "url": "https://github.com/KyleAMathews/react-headroom/issues"
+    "url": "https://github.com/koko-ng/react-headroom/issues"
   },
   "dependencies": {
     "prop-types": "^15.5.8",
